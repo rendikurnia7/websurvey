@@ -119,5 +119,5 @@ $sheet->setCellValue('O'.$highestRow,'=AVERAGE(O:O)');
 $writer = new Xlsx($spreadsheet);
 $writer->save('Data Quisioner.xlsx');
 
-echo "<script>window.location = 'Data Quisioner.xlsx'</script>";
+echo "<script>window.location = 'Data Quisioner.".'echo date(dmy)'."xlsx'</script>";
 ?>
