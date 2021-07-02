@@ -2,302 +2,321 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Survey</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-  <script type="text/javascript" src="js/jquery.signature.min.js"></script>
-  <style>
-    .kbw-signature { align-items: center; width: 650px; height: 200px;}
-#sig canvas{
-    width: 100% !important;
-    height: auto;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Survey</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 
 
 
-  <!-- Load an icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css"
+        rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<div class="navbar">
-  <a class="active" href="https://www.cdc.itpln.ac.id" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a>
-  
-  <a href="https://www.instagram.com/cdcitpln/" target="_blank"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-  <a href="/login.php"><i class="fa fa-fw fa-user"></i> Login</a>
-</div>
+    <script type="text/javascript" src="js/jquery.signature.min.js"></script>
+    <style>
+        .kbw-signature {
+            align-items: center;
+            width: 650px;
+            height: 200px;
+        }
+
+        #sig canvas {
+            width: 100% !important;
+            height: auto;
+        }
+    </style>
+
+
+
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+        <a class="active" href="https://www.cdc.itpln.ac.id" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a>
+
+        <a href="https://www.instagram.com/cdcitpln/" target="_blank"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="/login.php"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
 </head>
 
-<form action= "input.php" method="post"  enctype="multipart/form-data">
-<body>
-  <!-- Content -->
-  <div id="boxed">
-  <div class="container">
-    
-      <div class="form-group">
-          <div>
-              <h1 id=title>FORMULIR MUTU</h1>
-              <p id="description"><i>Survey Umpan Balik Pengguna Lulusan</i></p>
-          </div>
-          
-      </div>
+<form action="input.php" method="post" enctype="multipart/form-data">
 
-      <!-----Tanggal------>
-      <div class="form-group">
-          <label >Tanggal</label>
+    <body>
+        <!-- Content -->
+        <div id="boxed">
+            <div class="container">
 
-          <input class="form-control" id ="Tanggal" type="date" name="Tanggal" required>
+                <div class="form-group">
+                    <div>
+                        <h1 id=title>FORMULIR MUTU</h1>
+                        <p id="description"><i>Survey Umpan Balik Pengguna Lulusan</i></p>
+                    </div>
 
-      </div>
+                </div>
 
-      <!-----Nama Instansi------>
-      <div class="form-group">
-          <label >Nama Instansi Kerja</label>
-          <input class="form-control form-control-danger" id ="namaInstansi" type="text" name="namaInstansi" placeholder="Masukkan Nama Intansi" required>
-      </div>
+                <!-----Tanggal------>
+                <div class="form-group">
+                    <label>Tanggal</label>
 
-      <!-----Skala Perusahaan------>
-      <div class="form-group" >
-          <div class="form-group" >
-              <label  >Skala Perusahaan</label>
-              <div class="form-check" >
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" value = "Lokal/Wilayah/Berwirausaha tidak berbadan hukum"name="skalaPerusahaan" id="lokal"
-                      required> Lokal/Wilayah/Berwirausaha tidak berbadan hukum
-                  </label>
-              </div>
-              <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" value ="Multinasional" name="skalaPerusahaan" id="multinasional"
-                          value="Multinasional/Internasional"> Multinasional/Internasional
-                  </label>
-              </div>
-              <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="skalaPerusahaan" id="bumn"
-                          value="Nasional/Berwirausaha berbadan hukum"> Nasional/Berwirausaha berbadan hukum
-                  </label>
-              </div>
-          </div>
-      </div>
+                    <input class="form-control" id="Tanggal" type="date" name="Tanggal" required>
 
-          <!-----Nama Alumni------>
-          <div class="form-group">
-              <label >Nama Alumni</label>
+                </div>
 
-              <input class="form-control" type="text" placeholder="Nama Lengkap" name= "namaAlumni" id="namaAlumni" required>
-          </div>
+                <!-----Nama Instansi------>
+                <div class="form-group">
+                    <label>Nama Instansi Kerja</label>
+                    <input class="form-control form-control-danger" id="namaInstansi" type="text" name="namaInstansi"
+                        placeholder="Masukkan Nama Intansi" required>
+                </div>
 
-          <!-----Jabatan Alumni------>
-          <div class="form-group">
-              <label >Posisi/Jabatan Alumni </label>
-              <input class="form-control" type="text" name="jabatanAlumni" placeholder="Posisi Alumni Saat ini"
-                  id="jabatanAlumni"required>
-          </div>
+                <!-----Skala Perusahaan------>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>Skala Perusahaan</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio"
+                                    value="Lokal/Wilayah/Berwirausaha tidak berbadan hukum" name="skalaPerusahaan"
+                                    id="lokal" required> Lokal/Wilayah/Berwirausaha tidak berbadan hukum
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" value="Multinasional"
+                                    name="skalaPerusahaan" id="multinasional" value="Multinasional/Internasional">
+                                Multinasional/Internasional
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="skalaPerusahaan" id="bumn"
+                                    value="Nasional/Berwirausaha berbadan hukum"> Nasional/Berwirausaha berbadan hukum
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-----Nama Alumni------>
+                <div class="form-group">
+                    <label>Nama Alumni</label>
+
+                    <input class="form-control" type="text" placeholder="Nama Lengkap" name="namaAlumni" id="namaAlumni"
+                        required>
+                </div>
+
+                <!-----Jabatan Alumni------>
+                <div class="form-group">
+                    <label>Posisi/Jabatan Alumni </label>
+                    <input class="form-control" type="text" name="jabatanAlumni" placeholder="Posisi Alumni Saat ini"
+                        id="jabatanAlumni" required>
+                </div>
 
 
-          <!-----Prodi Alumni------>
-          <div class="form-group">
-            <label >Program Studi / Jurusan Alumni</label>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                        value="S1 Teknik Informatika" required> S1 Teknik Informatika
-                </label>
+                <!-----Prodi Alumni------>
+                <div class="form-group">
+                    <label>Program Studi / Jurusan Alumni</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="S1 Teknik Informatika" required> S1 Teknik Informatika
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="S1 Teknik Elektro"> S1 Teknik Elektro
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="S1 Teknik Sipil"> S1 Teknik Sipil
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="S1 Teknik Mesin"> S1 Teknik Mesin
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="D3 Teknik Elektro"> D3 Teknik Elektro
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
+                                value="D3 Teknik Mesin"> D3 Teknik Mesin
+                        </label>
+                    </div>
+                </div>
+
+                <!-----Tingkat Kesesuaian Kerja Alumni------>
+                <div class="form-group">
+                    <label>Tingkat Kesesuaian Kerja Dengan Bidang Keahlian Lulusan</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="kesesuaianBidang" id="tinggi"
+                                value="Tinggi" required> Tinggi
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="kesesuaianBidang" id="sedang"
+                                value="Sedang"> Sedang
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="kesesuaianBidang" id="rendah"
+                                value="Rendah"> Rendah
+                        </label>
+                    </div>
+                </div>
+
+                <br>
+                <div class="pernyataan">
+                    <p>Dengan ini memberikan tanggapan dan Penilaian sebagai berikut:</p>
+                </div>
+
+                <br>
+
+
+                <table class="table table-bordered" id="dataTable" width=100% cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Jenis Kemampuan</th>
+                            <th>Sangat Baik</th>
+                            <th>Baik</th>
+                            <th>Cukup</th>
+                            <th>Kurang</th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-----Integritas------>
+                        <tr>
+                            <td>Integritas (Etika dan Moral)</td>
+                            <td class="text-center"><input type="radio" value="4" name="Integritas" required></td>
+                            <td class="text-center"><input type="radio" value="3" name="Integritas"></td>
+                            <td class="text-center"><input type="radio" value="2" name="Integritas"></td>
+                            <td class="text-center"><input type="radio" value="1" name="Integritas"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Keahlian Berdasarkan Bidang Ilmu (Profesionalisme)</td>
+                            <td class="text-center"><input type="radio" value="4" name="Profesionalisme" required></td>
+                            <td class="text-center"><input type="radio" value="3" name="Profesionalisme"></td>
+                            <td class="text-center"><input type="radio" value="2" name="Profesionalisme"></td>
+                            <td class="text-center"><input type="radio" value="1" name="Profesionalisme"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Kemampuan Berbahasa Asing</td>
+                            <td class="text-center"><input type="radio" value="4" name="kemampuanBerbahasaAsing"
+                                    required></td>
+                            <td class="text-center"><input type="radio" value="3" name="kemampuanBerbahasaAsing"></td>
+                            <td class="text-center"><input type="radio" value="2" name="kemampuanBerbahasaAsing"></td>
+                            <td class="text-center"><input type="radio" value="1" name="kemampuanBerbahasaAsing"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Penggunaan Teknologi Informasi</td>
+                            <td class="text-center"><input type="radio" value="4" name="penggunaanTeknologiInformasi"
+                                    required></td>
+                            <td class="text-center"><input type="radio" value="3" name="penggunaanTeknologiInformasi">
+                            </td>
+                            <td class="text-center"><input type="radio" value="2" name="penggunaanTeknologiInformasi">
+                            </td>
+                            <td class="text-center"><input type="radio" value="1" name="penggunaanTeknologiInformasi">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Kemampuan Berkomunikasi</td>
+                            <td class="text-center"><input type="radio" value="4" name="kemampuanBerkomunikasi"
+                                    required></td>
+                            <td class="text-center"><input type="radio" value="3" name="kemampuanBerkomunikasi"></td>
+                            <td class="text-center"><input type="radio" value="2" name="kemampuanBerkomunikasi"></td>
+                            <td class="text-center"><input type="radio" value="1" name="kemampuanBerkomunikasi"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Kerjasama</td>
+                            <td class="text-center"><input type="radio" value="4" name="Kerjasama" required></td>
+                            <td class="text-center"><input type="radio" value="3" name="Kerjasama"></td>
+                            <td class="text-center"><input type="radio" value="2" name="Kerjasama"></td>
+                            <td class="text-center"><input type="radio" value="1" name="Kerjasama"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Pengembangan Diri</td>
+                            <td class="text-center"><input type="radio" value="4" name="pengembanganDiri" required></td>
+                            <td class="text-center"><input type="radio" value="3" name="pengembanganDiri"></td>
+                            <td class="text-center"><input type="radio" value="2" name="pengembanganDiri"></td>
+                            <td class="text-center"><input type="radio" value="1" name="pengembanganDiri"></td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+
+                <div class="form-group">
+                    <label>Usulan Perbaikan Untuk Peningkatan Kualitas Lulusan</label>
+                    <textarea class="form-control" type="text" name="Usulan" placeholder=" " id="usulan"></textarea>
+                </div>
+
+                <div class="owner">
+                    <p>Dengan ini saya menyatakan bahwa data yang diisikan adalah benar adanya.</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Nama Atasan</label>
+                    <input class="form-control" type="text" placeholder="Nama Lengkap Atasan" name="namaAtasan"
+                        required>
+                </div>
+
+                <p>Pilih Salah satu!</p>
+                <p> Select Your Signature File<p>
+
+                        <div>
+                            <input type="file" id="uploadSignature" name="uploadSignature" />
+                        </div>
+                        <p></p>
+                        <div class="col-md-12">
+                            <label>Draw Your Signature:</label>
+                            <br />
+                            <div id="sig"></div>
+                            <br />
+                            <button id="clear">Clear Signature</button>
+                            <textarea id="signature64" name="signed" style="display: none"></textarea>
+                        </div>
+
+                        <br />
+
+
+                        <div class="text-center">
+                            <p></p>
+                            <input class="text-center" type="submit" name="submitbtn" id="submit"></input>
+                        </div>
+
             </div>
-            
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                        value="S1 Teknik Elektro"> S1 Teknik Elektro
-                </label>
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                        value="S1 Teknik Sipil"> S1 Teknik Sipil
-                </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                      value="S1 Teknik Mesin"> S1 Teknik Mesin
-              </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                    value="D3 Teknik Elektro"> D3 Teknik Elektro
-            </label>
+
         </div>
-        <div class="form-check">
-          <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="Prodi" id="Prodi"
-                  value="D3 Teknik Mesin"> D3 Teknik Mesin
-          </label>
-      </div>
-          </div>
-
-          <!-----Tingkat Kesesuaian Kerja Alumni------>
-          <div class="form-group">
-              <label >Tingkat Kesesuaian Kerja Dengan Bidang Keahlian Lulusan</label>
-              <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="kesesuaianBidang" id="tinggi"
-                          value="Tinggi" required> Tinggi
-                  </label>
-              </div>
-              
-              <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="kesesuaianBidang" id="sedang"
-                          value="Sedang"> Sedang
-                  </label>
-              </div>
-              <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="kesesuaianBidang" id="rendah"
-                          value="Rendah"> Rendah
-                  </label>
-              </div>
-            </div>
-
-              <br>
-              <div class="pernyataan">
-                <p>Dengan ini memberikan tanggapan dan Penilaian sebagai berikut:</p>
-              </div>
-
-              <br>
-              
-
-              <table class="table table-bordered" id="dataTable" width= 100% cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Jenis Kemampuan</th>
-                        <th>Sangat Baik</th>
-                        <th>Baik</th>
-                        <th>Cukup</th>
-                        <th>Kurang</th>
-                        
-                        
-                    </tr>
-                </thead>
-        
-                <tbody>
-                    <!-----Integritas------>
-                    <tr>
-                        <td>Integritas (Etika dan Moral)</td>
-                        <td class="text-center"><input type="radio" value ="4" name="Integritas" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="Integritas"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="Integritas"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="Integritas"></td> 
-                    </tr>
-
-                    <tr>
-                        <td>Keahlian Berdasarkan Bidang Ilmu (Profesionalisme)</td>
-                        <td class="text-center"><input type="radio" value ="4" name="Profesionalisme" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="Profesionalisme"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="Profesionalisme"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="Profesionalisme"></td> 
-                    </tr>
-
-                    <tr>
-                        <td>Kemampuan Berbahasa Asing</td>
-                        <td class="text-center"><input type="radio" value ="4" name="kemampuanBerbahasaAsing" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="kemampuanBerbahasaAsing"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="kemampuanBerbahasaAsing"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="kemampuanBerbahasaAsing"></td> 
-                    </tr>
-
-
-                    <tr>
-                        <td>Penggunaan Teknologi Informasi</td>
-                        <td class="text-center"><input type="radio" value ="4" name="penggunaanTeknologiInformasi" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="penggunaanTeknologiInformasi"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="penggunaanTeknologiInformasi"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="penggunaanTeknologiInformasi"></td> 
-                    </tr>
-
-                    <tr>
-                        <td>Kemampuan Berkomunikasi</td>
-                        <td class="text-center"><input type="radio" value ="4" name="kemampuanBerkomunikasi" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="kemampuanBerkomunikasi"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="kemampuanBerkomunikasi"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="kemampuanBerkomunikasi"></td> 
-                    </tr>
-
-                    <tr>
-                        <td>Kerjasama</td>
-                        <td class="text-center"><input type="radio" value ="4" name="Kerjasama" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="Kerjasama"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="Kerjasama"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="Kerjasama"></td> 
-                    </tr>
-
-                    <tr>
-                        <td>Pengembangan Diri</td>
-                        <td class="text-center"><input type="radio" value ="4" name="pengembanganDiri" required></td>
-                        <td class="text-center"><input type="radio" value ="3" name="pengembanganDiri"></td>
-                        <td class="text-center"><input type="radio" value ="2" name="pengembanganDiri"></td>
-                        <td class="text-center"><input type="radio" value ="1" name="pengembanganDiri"></td> 
-                    </tr>
-                   
-                   
-                </tbody>
-        
-            </table>
-          
-        
-      <div class="form-group">
-          <label >Usulan Perbaikan Untuk Peningkatan Kualitas Lulusan</label>
-          <textarea class="form-control" type="text" name="Usulan" placeholder=" " id="usulan"></textarea>
-      </div>
-
-      <div class="owner">
-          <p>Dengan ini saya menyatakan bahwa data yang diisikan adalah benar adanya.</p>
-      </div>
-      <div class="form-group mb-3">
-          <label >Nama Atasan</label>
-          <input class="form-control" type="text" placeholder="Nama Lengkap Atasan" name="namaAtasan" required>
-      </div>
-     
-      <p>Pilih Salah satu!</p>
-      <p> Select Your Signature File<p>
-
-        <div>
-          <input type="file"  id="uploadSignature" name="uploadSignature"/>
-      </div>
-      <p></p>
-      <div class="col-md-12">
-        <label >Draw Your Signature:</label>
-        <br/>
-        <div id="sig" ></div>
-        <br/>
-        <button id="clear">Clear Signature</button>
-        <textarea id="signature64" name="signed" style="display: none"></textarea>
-    </div>
-
-    <br/>
-
-  
-    <div class="text-center">
-        <p></p>
-    <input class="text-center" type="submit" name="submitbtn" id="submit"></input>
-    </div>
-
-  </div>
-
-  </div>
 </form>
 </div>
 
@@ -306,18 +325,27 @@
 </footer>
 
 <script type="text/javascript">
-  var sig = $('#sig').signature({syncField: '#signature64', syncFormat: 'PNG'});
-  $('#clear').click(function(e) {
-      e.preventDefault();
-      sig.signature('clear');
-      $("#signature64").val('');
-  });
+    var sig = $('#sig').signature({
+        syncField: '#signature64',
+        syncFormat: 'PNG'
+    });
+    $('#clear').click(function (e) {
+        e.preventDefault();
+        sig.signature('clear');
+        $("#signature64").val('');
+    });
 </script>
 
-  <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+</script>
 </body>
 
 </html>
