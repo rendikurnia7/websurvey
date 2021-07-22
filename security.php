@@ -1,5 +1,6 @@
 <?php
-session_start();
+session_name('usersession');
+session_start(['user']);
 
 include('database/dbconfig.php');
 if($connection)

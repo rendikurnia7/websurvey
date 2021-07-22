@@ -1,5 +1,7 @@
 <?php
-session_start();
+session_name('adminsession');
+session_start(['admin']);
+
 
 include('database/dbconfig.php');
 if($connection)
@@ -11,7 +13,7 @@ else
     header("Location: database/dbconfig.php");
 }
 
-if(!$_SESSION['username'] && !$_SESSION['usertype'] = "admin")
+if(!$_SESSION['username'])
 {
     header('Location: login.php');
 }

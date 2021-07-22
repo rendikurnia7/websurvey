@@ -1,5 +1,5 @@
 <?php 
-include ('security.php');
+include ('securityA.php');
 include ('includes/header.php');
 include ('includes/navbarA.php');
 
@@ -10,6 +10,8 @@ include ('includes/navbarA.php');
                         <a href="spreadSheetQuisioners1TS2022.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
         </div>
+        <h5 class="h5 mb-0 text-gray-800">S1 Teknik Mesin</h5>
+        <br>
         <label for="tahun">Select Tahun Ke-</label>
 <div>
 <form class="user" action="code.php" method="POST">
@@ -20,7 +22,7 @@ include ('includes/navbarA.php');
   <option name="tahun" value="2023">2023</option>
   <option name="tahun" value="2024">2024</option>
 </select>
-<button class="btn btn-info" type="submit" name="selectTahuns1TM">Select</button>
+<button class="btn btn-info" type="submit" name="selectTahuns1TS">Select</button>
 </div>
 </form>
 

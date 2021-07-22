@@ -1,7 +1,7 @@
 <?php
-include('security.php');
+include('securityA.php');
 
- if(isset($_POST['logout_btn'])){
+ if(isset($_POST['logoutA_btn'])){
 
     session_destroy();
     unset($_SESSION['username']);

@@ -2,7 +2,7 @@
    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center">
   <div class="sidebar-brand-icon rotate-n-15">
   <i class="fas fa-columns"></i>
   </div>
@@ -25,10 +25,10 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-  Interface
+  Admin
 </div>
 
-<!-- Nav Item - Pages Collapse Menu -->
+<!-- Nav Item - Pages Collapse Menu 
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
     <i class="fas fa-fw fa-cog"></i>
@@ -42,6 +42,7 @@
     </div>
   </div>
 </li>
+-->
 
 
 
@@ -59,7 +60,7 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-  Addons
+  Data
 </div>
 
 
@@ -229,9 +230,9 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
 
-          <form action="logout.php" method="POST"> 
+          <form action="logoutA.php" method="POST"> 
           
-            <button type="submit" name="logout_btn" class="btn btn-primary">Logout</button>
+            <button type="submit" name="logoutA_btn" class="btn btn-primary">Logout</button>
 
           </form>
 

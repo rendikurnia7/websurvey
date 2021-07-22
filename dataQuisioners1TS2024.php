@@ -1,5 +1,5 @@
 <?php 
-include ('security.php');
+include ('securityA.php');
 include ('includes/header.php');
 include ('includes/navbarA.php');
 
@@ -11,6 +11,7 @@ include ('includes/navbarA.php');
                                 class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
         </div>
         <h5 class="h5 mb-0 text-gray-800">S1 Teknik Mesin</h5>
+        <br>
         <label for="tahun">Select Tahun Ke-</label>
 <div>
 <form class="user" action="code.php" method="POST">
@@ -21,7 +22,7 @@ include ('includes/navbarA.php');
   <option name="tahun" value="2023">2023</option>
   <option name="tahun" value="2024" selected>2024</option>
 </select>
-<button class="btn btn-info" type="submit" name="selectTahuns1TM">Select</button>
+<button class="btn btn-info" type="submit" name="selectTahuns1TS">Select</button>
 </div>
 </form>
 
@@ -29,7 +30,7 @@ include ('includes/navbarA.php');
         <?php
 
 $no=1;
-$query = "select * from quisioner where Prodi='S1 Teknik Sipil' ";
+$query = "select * from quisioner where Prodi='S1 Teknik Sipil' AND Tanggal LIKE '%2023%'";
 $query_run = mysqli_query($connection, $query);
 
 ?>

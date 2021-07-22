@@ -1,10 +1,10 @@
 <?php
 
-include('includes/security.php');
+include('includes/securityA.php');
 
 
 if(isset($_POST['updatebtn']))
-    {include('includes/security.php');
+    {
         $id =$_POST['edit_id'];
         $username = $_POST['edit_username'];
         $password = $_POST['edit_password'];
@@ -26,7 +26,7 @@ if(isset($_POST['updatebtn']))
 
 
     if(isset($_POST['deletebtn']))
-    {include('includes/security.php');
+    {
         $id=$_POST['delete_id'];
     
         $query ="DELETE from admin where id='$id' ";

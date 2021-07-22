@@ -1,5 +1,5 @@
 <?php 
-include ('security.php');
+include ('securityA.php');
 include ('includes/header.php');
 include ('includes/navbarA.php');
 include ('includes/scripts.php');

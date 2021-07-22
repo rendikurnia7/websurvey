@@ -119,6 +119,7 @@ elseif(isset($_SESSION['status']) && $_SESSION['status'] !='')
     </div>
 </div>
 </div>
+        </div>
 
 <?php
 include('includes/scripts.php');

@@ -1,5 +1,5 @@
 <?php 
-include ('security.php');
+include ('securityA.php');
 include ('includes/header.php');
 include ('includes/navbarA.php');
 
@@ -11,6 +11,7 @@ include ('includes/navbarA.php');
                                 class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
         </div>
         <h5 class="h5 mb-0 text-gray-800">S1 Teknik Sipil</h5>
+        <br>
         <label for="tahun">Select Tahun Ke-</label>
 <div>
 <form class="user" action="code.php" method="POST">

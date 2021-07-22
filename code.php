@@ -1,9 +1,7 @@
 <?php
-
-include('security.php');
-
 if(isset($_POST['registerbtn']))
 {
+    include('securityA.php');
     $id =$_POST['id'];
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -41,6 +39,7 @@ if(isset($_POST['registerbtn']))
 
     if(isset($_POST['updatebtn']))
     {
+        include('securityA.php');
         $id =$_POST['edit_id'];
         $username = $_POST['edit_username'];
         $password = $_POST['edit_password'];
@@ -64,6 +63,7 @@ if(isset($_POST['registerbtn']))
 
     if(isset($_POST['update_admin']))
 {
+    include('securityA.php');
     $id=$_POST['edit_id'];
     $username = $_POST['edit_username'];
     $usertype = $_POST['edit_usertype'];
@@ -89,6 +89,7 @@ if(isset($_POST['registerbtn']))
 
     if(isset($_POST['delete_admin']))
     {
+        include('securityA.php');
         $username = $_POST['delete_username'];
     
         $query = "DELETE FROM admin WHERE username='$username' ";
@@ -112,6 +113,7 @@ if(isset($_POST['registerbtn']))
 
     if(isset($_POST['update_dataperusahaan']))
     {
+        include('securityA.php');
         $id = $_POST['edit_idpt'];
         $namaPerusahaan = $_POST['edit_namapt'];
         $alamatPerusahaan = $_POST['edit_alamatpt'];
@@ -139,6 +141,7 @@ if(isset($_POST['registerbtn']))
     
         if(isset($_POST['delete_perusahaan']))
         {
+            include('securityA.php');
             $namaPerusahaan = $_POST['delete_namapt'];
         
             $query = "DELETE FROM dataperusahaan WHERE namaPerusahaan='$namaPerusahaan' ";
@@ -161,6 +164,7 @@ if(isset($_POST['registerbtn']))
 
         if(isset($_POST['login_btn']))
         {
+            include('connection.php');
             $username_login = $_POST['usernamel'];
             $password_login = $_POST['passwordl'];
     
@@ -175,6 +179,7 @@ if(isset($_POST['registerbtn']))
     
             if($usertype ['usertype']== 'admin')
             {
+                include('securityA.php');
                 $_SESSION['username'] = $username_login;
                 $_SESSION['usertype'] = "admin";
                 
@@ -182,6 +187,7 @@ if(isset($_POST['registerbtn']))
             }
     
             elseif($usertype ['usertype']=='user'){
+                include('security.php');
                 $_SESSION['username'] = $username_login;
                 $_SESSION['usertype'] = "user";
                 header('Location: dasboard.php'); 
@@ -198,6 +204,7 @@ if(isset($_POST['registerbtn']))
         }
     
         if(isset($_POST['selectTahunAll'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisionerAll.php'); 
@@ -217,6 +224,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahund3TM'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisionerd3TM.php'); 
@@ -236,6 +244,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahund3TM'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisionerd3TM.php'); 
@@ -255,6 +264,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahuns1TI'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisioners1TI.php'); 
@@ -274,6 +284,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahuns1TE'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisioners1TE.php'); 
@@ -293,6 +304,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahuns1TS'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisioners1TS.php'); 
@@ -312,6 +324,7 @@ if(isset($_POST['registerbtn']))
         }
 
         if(isset($_POST['selectTahuns1TM'])){
+            include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
                 header('Location: dataQuisioners1TM.php'); 
