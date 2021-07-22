@@ -1,21 +1,43 @@
 <?php 
 include ('security.php');
 include ('includes/header.php');
-include ('includes/navbar.php');
+include ('includes/navbarA.php');
 
 ?>
 <div class="container-fluid table-responsive">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+<label for="prodi">Select Program Studi</label>
+<div>
+<form class="user" action="dataQuisioner.php" method="GET">
+<select name="prodi" id="prodi">
+    <option >--ALL--</option>
+  <option name="prodi" value="S1 Teknik Informatika">S1 Teknik Informatika </option>
+  <option name="prodi" value="S1 Teknik Elektro">S1 Teknik Elektro </option>
+  <option name="prodi" value="S1 Teknik Sipil">S1 Teknik Sipil </option>
+  <option name="prodi" value="S1 Teknik Mesin">S1 Teknik Mesin </option>
+  <option name="prodi" value="D3 Teknik Elektro" >D3 Teknik Elektro </option>
+  <option name="prodi" value="D3 Teknik Mesin">D3 Teknik Mesin </option>
+</select>
+<button class="btn btn-info" type="submit" value="cari">Select</button>
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Quisioner</h1>
-                        <a href="spreadSheetQuisioner.php" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="spreadSheetQuisioner1.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
         </div>
+</div>
+</form>
+
 
         <?php
+if(isset($_GET['prodi'])){
+	$cari = $_GET['prodi'];
+	echo "<b>Hasil pencarian : ".$cari."</b>";
+}
 
 $no=1;
-$query = "select * from quisioner";
-$query_run = mysqli_query($connection, $query);
+//$query = "select * from quisioner ";
+//$query_run = mysqli_query($connection, $query);
 
 ?>
         
@@ -28,6 +50,7 @@ $query_run = mysqli_query($connection, $query);
                 <th>Skala Perusahaan</th>
                 <th>Nama Alumni</th>
                 <th>Jabatan Alumni</th>
+                <th>Program Studi</th>
                 <th>Kesesuaian Bidang</th>
                 <th>Integritas</th>
                 <th>Profesionalisme</th>
@@ -38,9 +61,8 @@ $query_run = mysqli_query($connection, $query);
                 <th>Pengembangan Diri</th>
                 <th>Usulan</th>
                 <th>Nama Atasan</th>
-                <th>Upload Signature</th>
-                <th>Draw Signature</th>
                 <th>Location Signature</th>
+                <th>Signature</th>
                 
                 
             </tr>
@@ -48,42 +70,46 @@ $query_run = mysqli_query($connection, $query);
 
         <tbody>
             <?php
-            if(mysqli_num_rows($query_run) > 0){
-                while($row = mysqli_fetch_assoc($query_run))
-                {
+            if(isset($_GET['prodi'])){
+                $cari = $_GET['prodi'];
+                $data = mysqli_query($connection,"select * from quisioner where Prodi ='$cari'");				
+            }else{
+                $data = mysqli_query($connection,"select * from quisioner");		
+            }
+            while($d = mysqli_fetch_array($data)){
+            /*if(mysqli_num_rows($query_run) > 0){
+                while($d = mysqli_fetch_assoc($query_run))
+                {*/
                 ?>
              
             <tr>
                 <td><?php echo $no++?></td>
-                <td><?php echo $row['Tanggal']; ?></td>
-                <td><?php echo $row['namaInstansi']; ?></td>
-                <td><?php echo $row['skalaPerusahaan']; ?></td>
-                <td><?php echo $row['namaAlumni']; ?></td>
-                <td><?php echo $row['jabatanAlumni']; ?></td>
-                <td><?php echo $row['kesesuaianBidang']; ?></td>
-                <td><?php echo $row['Integritas']; ?></td>
-                <td><?php echo $row['Profesionalisme']; ?></td>
-                <td><?php echo $row['kemampuanBerbahasaAsing']; ?></td>
-                <td><?php echo $row['penggunaanTeknologiInformasi']; ?></td>
-                <td><?php echo $row['kemampuanBerkomunikasi']; ?></td>
-                <td><?php echo $row['Kerjasama']; ?></td>
-                <td><?php echo $row['pengembanganDiri']; ?></td>
-                <td><?php echo $row['Usulan']; ?></td>
-                <td><?php echo $row['namaAtasan']; ?></td>
+                <td><?php echo $d['Tanggal']; ?></td>
+                <td><?php echo $d['namaInstansi']; ?></td>
+                <td><?php echo $d['skalaPerusahaan']; ?></td>
+                <td><?php echo $d['namaAlumni']; ?></td>
+                <td><?php echo $d['jabatanAlumni']; ?></td>
+                <td><?php echo $d['Prodi']; ?></td>
+                <td><?php echo $d['kesesuaianBidang']; ?></td>
+                <td><?php echo $d['Integritas']; ?></td>
+                <td><?php echo $d['Profesionalisme']; ?></td>
+                <td><?php echo $d['kemampuanBerbahasaAsing']; ?></td>
+                <td><?php echo $d['penggunaanTeknologiInformasi']; ?></td>
+                <td><?php echo $d['kemampuanBerkomunikasi']; ?></td>
+                <td><?php echo $d['Kerjasama']; ?></td>
+                <td><?php echo $d['pengembanganDiri']; ?></td>
+                <td><?php echo $d['Usulan']; ?></td>
+                <td><?php echo $d['namaAtasan']; ?></td>
                 
-                <td><?php echo $row['locationSignature']; ?></td>
+                <td><?php echo $d['locationSignature']; ?></td>
+                <td><?php echo  "Image: <img src='../webSurvey/".$d['locationSignature']."' alt='Image' width=\"150\" height=\"60\">" ;?> </td>
                 
 
                
             </tr>
            
-           <?php
-                }
-            }
-            else {
-                echo "No Record Found";
-            }
-            ?>
+           <?php } ?>
+               
         </tbody>
 
     </table>

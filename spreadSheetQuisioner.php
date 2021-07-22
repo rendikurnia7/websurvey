@@ -3,6 +3,17 @@ include('connection.php');
 require '../phpSpreedSheet/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PhpOffice\PhpSpreadsheet\Chart\Chart;
+use PhpOffice\PhpSpreadsheet\Chart\DataSeries;
+use PhpOffice\PhpSpreadsheet\Chart\DataSeriesValues;
+use PhpOffice\PhpSpreadsheet\Chart\Layout;
+use PhpOffice\PhpSpreadsheet\Chart\Legend;
+use PhpOffice\PhpSpreadsheet\Chart\PlotArea;
+use PhpOffice\PhpSpreadsheet\Chart\Title;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+
+
+require __DIR__ . '/../Header.php';
 
 $spreadsheet = new Spreadsheet();
 
@@ -96,6 +107,8 @@ foreach (range('A3','R') as $col) {
     $sheet->getColumnDimension($col)->setAutoSize(true);
  }
 
+
+ 
 $sheet->getStyle('H'.$highestRow)->applyFromArray($cellColour);
 $sheet->getStyle('I'.$highestRow)->applyFromArray($cellColour);
 $sheet->getStyle('J'.$highestRow)->applyFromArray($cellColour);

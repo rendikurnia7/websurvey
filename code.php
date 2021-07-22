@@ -159,36 +159,176 @@ if(isset($_POST['registerbtn']))
         }
 
 
-    if(isset($_POST['login_btn']))
-    {
-        $username_login = $_POST['usernamel'];
-        $password_login = $_POST['passwordl'];
-
-        $query = "SELECT * FROM admin WHERE username='$username_login' AND password='$password_login'";
-        $query_run = mysqli_query($connection, $query);
-        $usertype = mysqli_fetch_array($query_run);
+        if(isset($_POST['login_btn']))
+        {
+            $username_login = $_POST['usernamel'];
+            $password_login = $_POST['passwordl'];
     
-        if($usertype ['usertype']== 'admin')
-        {
-            $_SESSION['username'] = $username_login;
+            $query = "SELECT * FROM admin WHERE username='$username_login' AND password='$password_login'";
+            $query_run = mysqli_query($connection, $query);
+            $usertype = mysqli_fetch_array($query_run);
+            // menghitung jumlah data yang ditemukan
+            $cek = mysqli_num_rows($query);
+    
+            if ($cek>0);{
+                $data = mysqli_fetch_assoc($query);
+    
+            if($usertype ['usertype']== 'admin')
+            {
+                $_SESSION['username'] = $username_login;
+                $_SESSION['usertype'] = "admin";
+                
+                header('Location: dasboardA.php'); 
+            }
+    
+            elseif($usertype ['usertype']=='user'){
+                $_SESSION['username'] = $username_login;
+                $_SESSION['usertype'] = "user";
+                header('Location: dasboard.php'); 
+    
+            }
             
-            header('Location: dasboardA.php'); 
+            else
+            {
+                $_SESSION['status'] ="Username / Password Invalid";        
+                
+                header('Location: login.php'); 
+                }    
+            }
+        }
+    
+        if(isset($_POST['selectTahunAll'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisionerAll.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisionerAll2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisionerAll2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisionerAll2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisionerAll2024.php'); 
+            }
         }
 
-        elseif($usertype ['usertype']=='user'){
-            $_SESSION['username'] = $username_login;
-            
-            header('Location: dasboard.php'); 
-
+        if(isset($_POST['selectTahund3TM'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisionerd3TM.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisionerd3TM2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisionerd3TM2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisionerd3TM2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisionerd3TM2024.php'); 
+            }
         }
-        
-        else
-        {
-            $_SESSION['status'] ="Username / Password Invalid";        
-            
-            header('Location: login.php'); 
-        }    
-    }
+
+        if(isset($_POST['selectTahund3TM'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisionerd3TM.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisionerd3TM2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisionerd3TM2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisionerd3TM2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisionerd3TM2024.php'); 
+            }
+        }
+
+        if(isset($_POST['selectTahuns1TI'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisioners1TI.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisioners1TI2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisioners1TI2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisioners1TI2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisioners1TI2024.php'); 
+            }
+        }
+
+        if(isset($_POST['selectTahuns1TE'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisioners1TE.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisioners1TE2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisioners1TE2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisioners1TE2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisioners1TE2024.php'); 
+            }
+        }
+
+        if(isset($_POST['selectTahuns1TS'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisioners1TS.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisioners1TS2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisioners1TS2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisioners1TS2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisioners1TS2024.php'); 
+            }
+        }
+
+        if(isset($_POST['selectTahuns1TM'])){
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisioners1TM.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisioners1TM2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisioners1TM2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisioners1TM2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisioners1TM2024.php'); 
+            }
+        }
 
 
   

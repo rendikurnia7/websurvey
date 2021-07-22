@@ -37,8 +37,6 @@ $query_run = mysqli_query($connection, $query);
                 <th>Alamat Perusahaan</th>
                 <th>Email Perusahaan</th>
                 <th>No.Telepon Perusahaan</th>
-                <th>Edit</th>
-                <th>Delete</th>
                 
             </tr>
         </thead>
@@ -56,20 +54,6 @@ $query_run = mysqli_query($connection, $query);
                 <td><?php echo $row['alamatPerusahaan']; ?></td>
                 <td><?php echo $row['emailPerusahaan']; ?></td>
                 <td><?php echo $row['no_telp']; ?></td>
-
-                <td>
-                <form action="editperusahaan.php" method ="post">
-                <input type="hidden" name="edit_idpt" value ="<?php echo $row['id'];?>">
-                <button type="submit" name ="edit_perusahaan" class= "btn btn-success">EDIT</button>
-                </form>
-                </td>
-
-                <td>
-                    <form action="code.php" method="post">
-                    <input type="hidden" name="delete_namapt" value="<?php echo $row['namaPerusahaan'];?>">
-                    <button type="submit" name= "delete_perusahaan" class= "btn btn-danger"> DELETE</button>
-                </form>
-            </td>
             </tr>
            
            <?php

@@ -9,11 +9,10 @@
   $result  = mysqli_query($koneksi, $mysqli);
 
   if ($result) {
-    echo "Input Success";
+    header('Location: quisioner.html');
   } else {
     echo "Input gagal";
   }
   mysqli_close($koneksi);
 ?>
 
-<meta http-equiv="refresh" content="0; url='thankSubmitting.html'" />

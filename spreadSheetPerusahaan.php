@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-require '../phpSpreedSheet/autoload.php';
+require '../phpSpreedSheet1/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -68,6 +68,5 @@ $sheet->getStyle('A3:E3')->getAlignment()->setHorizontal('center');
 $writer = new Xlsx($spreadsheet);
 $writer->save('Data Perusahaan.xlsx');
 
-
-echo "<script>window.location = 'Data Pern.xlsx'</script>";
+echo "<script>window.location = 'Data Perusahaan.xlsx'</script>";
 ?>
