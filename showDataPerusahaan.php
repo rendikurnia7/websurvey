@@ -9,7 +9,18 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/styleTable.css">
+  <link rel="stylesheet" href="css/styleTable.css">
+ 
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+   <!-- Load an icon library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+    <a class="active" href="index.php" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a>
+
+
+    <a href="login.php" target="_blank"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
 </head>
 
 
@@ -64,5 +75,83 @@ $query_run = mysqli_query($connection, $query);
         </tbody>
 
     </table>
+
+        </div>
+    <p></p>
+<!-- Footer -->
+<footer class="page-footer font-small bg-light pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase "><i class="fa fa-map-marker" aria-hidden="true"></i> Location:</h5>
+                <p>Menara PLN Jl. Lingkar Luar Barat,
+                    Duri Kosambi 11750. , Jakarta Barat , DKI Jakarta , Indonesia</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase"></h5>
+
+                <ul class="list-unstyled">
+
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Contact :</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://cdc.itpln.ac.id/" target="_blank" style="color:black;"><i
+                                class="fas fa-globe"></i> Website: https://cdc.itpln.ac.id</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/cdcitpln/" target="_blank" style="color:black;"><i
+                                class="fab fa-instagram"></i>
+                            Instagram: @cdcitpln</i></a>
+                    </li>
+                    <li>
+                        <a><i class="fas fa-phone-alt"></i> Telepon: (021) 5440342, ext:2103</a>
+                    </li>
+                    <li>
+                        <a><i class="far fa-envelope"></i> Email: cdc@itpln.ac.id</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+
+    </div>
+    <!-- Copyright -->
+
+</footer>
 
 </html>

@@ -90,7 +90,7 @@ $query_run = mysqli_query($connection, $query);
                 <td><?php echo $row['namaAtasan']; ?></td>
                 
                 <td><?php echo $row['locationSignature']; ?></td>
-                <td><?php echo  "Image: <img src='../userSurvey/".$row['locationSignature']."' alt='Image' width=\"150\" height=\"60\">" ;?> </td>
+                <td><?php echo  "Image: <img src='../webSurvey/".$row['locationSignature']."' alt='Image' width=\"150\" height=\"60\">" ;?> </td>
                 
 
                

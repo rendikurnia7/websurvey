@@ -1,31 +1,70 @@
-
 table {
-border-collapse: collapse;
-width: 100%;
-color: #32964b;
-font-family: monospace;
-font-size: 15px;
-text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  color: #32964b;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: left;
 }
+
 th {
-background-color: #588c7e;
-text-align: center;
+  background-color: #588c7e;
+  text-align: center;
 
 }
-tr:nth-child(even) {background-color: #f2f2f2}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
 
 #boxed {
-    border-style: solid;
-    padding: 30px;
-    background-color: rgba(124, 113, 113, 0.1);
-    background-filter: blur(5px);
-    border-color: rgb(255, 255, 255);
-    min-width: 500px;
-    max-width: 1000px;
-    margin: 0 auto;
-    
-    /*position: relative; 
+  border-style: solid;
+  padding: 30px;
+  background-color: rgba(124, 113, 113, 0.1);
+  background-filter: blur(5px);
+  border-color: rgb(255, 255, 255);
+  min-width: 500px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /*position: relative; 
     left: 50%; 
     transform: translateX(-50%);*/
-  
-  }
+
+}
