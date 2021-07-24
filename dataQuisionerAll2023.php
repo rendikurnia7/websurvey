@@ -7,10 +7,15 @@ include ('includes/navbarA.php');
 <div class="container-fluid table-responsive">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Quisioner</h1>
-                        <a href="spreadSheetQuisionerAll2023.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
+                        <a href="spreadSheetQuisionerAll2023.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report to Excel</a>
+                                
         </div>
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h5 class="h5 mb-0 text-gray-800">--ALL--</h5>
+        <a href="mpdfAll2023.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report to PDF</a>
+                                </div>
         <br>
         <label for="tahun">Select Tahun Ke-</label>
 <div>

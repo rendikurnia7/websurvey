@@ -243,23 +243,23 @@ if(isset($_POST['registerbtn']))
             }
         }
 
-        if(isset($_POST['selectTahund3TM'])){
+        if(isset($_POST['selectTahund3TE'])){
             include('securityA.php');
             $selectTahun = $_POST['tahun'];
             if ($selectTahun == '*') {
-                header('Location: dataQuisionerd3TM.php'); 
+                header('Location: dataQuisionerd3TE.php'); 
             }
             elseif ($selectTahun == '2021') {
-                header('Location: dataQuisionerd3TM2021.php'); 
+                header('Location: dataQuisionerd3TE2021.php'); 
             }
             elseif ($selectTahun == '2022') {
-                header('Location: dataQuisionerd3TM2022.php'); 
+                header('Location: dataQuisionerd3TE2022.php'); 
             }
             elseif ($selectTahun == '2023') {
-                header('Location: dataQuisionerd3TM2023.php'); 
+                header('Location: dataQuisionerd3TE2023.php'); 
             }
             elseif ($selectTahun == '2024') {
-                header('Location: dataQuisionerd3TM2024.php'); 
+                header('Location: dataQuisionerd3TE2024.php'); 
             }
         }
 

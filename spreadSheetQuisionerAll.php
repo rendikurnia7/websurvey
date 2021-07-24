@@ -442,7 +442,7 @@ $chart3 = new Chart(
 // Set the position where the chart should appear in the worksheet
 $chart1->setTopLeftPosition('U22');
 $chart1->setBottomRightPosition('Y39');
-$chart2->setTopLeftPosition('L62');
+$chart2->setTopLeftPosition('U62');
 $chart2->setBottomRightPosition('Y79');
 $chart3->setTopLeftPosition('U42');
 $chart3->setBottomRightPosition('Y57');
