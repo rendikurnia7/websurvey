@@ -45,7 +45,7 @@ include ('includes/navbar.php');
     </div>
     <p></p>
 
-    <a href="register.php" class="btn btn-danger" >Cancel</a>
+    <a href="registerA.php" class="btn btn-danger" >Cancel</a>
     <button type="submit" name="update_admin" class= "btn btn-primary">Update</button>
 
     </form>
