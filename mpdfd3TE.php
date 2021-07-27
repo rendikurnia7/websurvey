@@ -21,19 +21,16 @@ $html= '<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/stylePDF.css">
 <title> Report User Survey D3 Teknik Elektro</title>
 </head>
-<style>
-.tc {
-    text-align: center;
-  }
-</style>
+
 <body>
 <h1>Report User Survey D3 Teknik Elektro</h1>
 
 <table border="1" id="dataTable" cellspacing="0">
             <thead>
-                <tr>
+                <tr class="title">
                     <th>No.</th>
                     <th>Tanggal</th>
                     <th>Nama Instansi</th>

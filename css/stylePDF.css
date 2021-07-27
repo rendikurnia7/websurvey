@@ -1,0 +1,15 @@
+body {
+    font-family: arial;
+}
+
+.title {
+    background-color: rgb(240, 237, 64);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(133, 209, 240);
+}
+
+.tc {
+    text-align: center;
+}

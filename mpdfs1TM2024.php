@@ -21,7 +21,8 @@ $html= '<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title> Report User Survey --ALL--</title>
+<title> Report User Survey S1 Teknik Mesin 2024</title>
+<link rel="stylesheet" href="css/stylePDF.css">
 </head>
 <style>
 .tc {
@@ -29,11 +30,11 @@ $html= '<!DOCTYPE html>
   }
 </style>
 <body>
-<h1>Report User Survey --ALL--</h1>
+<h1>Report User Survey S1 Teknik Mesin 2024</h1>
 
 <table border="1" id="dataTable" cellspacing="0">
             <thead>
-                <tr>
+                <tr class="title">
                     <th>No.</th>
                     <th>Tanggal</th>
                     <th>Nama Instansi</th>

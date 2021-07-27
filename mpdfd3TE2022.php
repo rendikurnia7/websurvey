@@ -22,18 +22,15 @@ $html= '<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <title> Report User Survey D3 Teknik Elektro 2022</title>
+<link rel="stylesheet" href="css/stylePDF.css">
 </head>
-<style>
-.tc {
-    text-align: center;
-  }
-</style>
+
 <body>
 <h1>Report User Survey D3 Teknik Elektro 2022</h1>
 
 <table border="1" id="dataTable" cellspacing="0">
             <thead>
-                <tr>
+                <tr class="title">
                     <th>No.</th>
                     <th>Tanggal</th>
                     <th>Nama Instansi</th>

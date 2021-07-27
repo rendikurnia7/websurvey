@@ -21,11 +21,10 @@ $html= '<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <title>Report User Survey All 2024</title>
+<link rel="stylesheet" href="css/stylePDF.css">
 </head>
 <style>
-.tc {
-    text-align: center;
-  }
+
 </style>
 <body>
 <h1>Report User Survey All 2024</h1>
