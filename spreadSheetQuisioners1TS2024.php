@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-require '../phpSpreedSheet1/autoload.php';
+require 'phpSpreedSheet/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\Chart\Chart;
@@ -11,7 +11,6 @@ use PhpOffice\PhpSpreadsheet\Chart\PlotArea;
 use PhpOffice\PhpSpreadsheet\Chart\Title;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Chart\Layout;
-
 
 
 $spreadsheet = new Spreadsheet();

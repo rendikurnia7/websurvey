@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-require '../phpSpreedSheet1/autoload.php';
+require 'phpSpreedSheet/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 

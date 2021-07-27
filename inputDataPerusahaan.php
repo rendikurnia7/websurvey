@@ -1,5 +1,5 @@
 <?php
-   $koneksi = mysqli_connect("localhost","root","","usersurvey");
+   include('conn.php');
   $namaPerusahaan = isset($_POST['namaPerusahaan']) ? $_POST['namaPerusahaan'] : '';
 	$alamatPerusahaan = isset($_POST['alamatPerusahaan']) ? $_POST['alamatPerusahaan'] : '';
 	$emailPerusahaan = isset($_POST['emailPerusahaan']) ? $_POST['emailPerusahaan'] : '';
