@@ -1,7 +1,7 @@
 <?php 
 include ('securityA.php');
 include ('includes/header.php');
-include ('includes/navbar.php');
+include ('includes/navbarA.php');
 ?>
 
 <div class= "container-fluid">
