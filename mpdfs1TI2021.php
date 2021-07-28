@@ -13,7 +13,7 @@ function query($query) {
 	return $rows;
 }
 
-$data = query("select * from quisioner  where Prodi='S1 Teknik Infotmatika' AND Tanggal LIKE '%2021%'");
+$data = query("select * from quisioner where Prodi='S1 Teknik Informatika' AND Tanggal LIKE '%2021%'");
 $mpdf= new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [500, 236]]);
 
 
@@ -21,12 +21,12 @@ $html= '<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title> Report User Survey S1 Teknik Infotmatika 2021</title>
+<title> Report User Survey S1 Teknik Informatika 2021</title>
 <link rel="stylesheet" href="css/stylePDF.css">
 </head>
 
 <body>
-<h1>Report User Survey S1 Teknik Infotmatika 2021</h1>
+<h1>Report User Survey S1 Teknik Informatika 2021</h1>
 
 <table border="1" id="dataTable" cellspacing="0">
             <thead>

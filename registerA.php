@@ -21,12 +21,12 @@ include ('includes/navbarA.php');
 
             <div class="form-group">
                 <label> Username </label>
-                <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                <input type="text" name="username" class="form-control" placeholder="Enter Username Max.20 Karakter">
             </div>
             
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                <input type="password" name="password" class="form-control" placeholder="Enter Password Max.10 Karakter">
             </div>
             <div class="form-group">
                 <label>Confirm Password</label>

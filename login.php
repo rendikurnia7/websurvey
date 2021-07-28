@@ -37,11 +37,11 @@ session_start();
 
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user"
-                                        name="usernamel"placeholder="Enter Username...">
+                                        name="usernamel"placeholder="Enter Username..." autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-user"
-                                    name="passwordl" placeholder="Password">
+                                    name="passwordl" placeholder="Password" autocomplete="off">
                                 </div>
                                 
                                 <button type="submit" name="login_btn" class="btn btn-primary btn-user btn-block">Login</button>

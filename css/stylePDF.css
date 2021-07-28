@@ -13,3 +13,16 @@ tr:nth-child(even) {
 .tc {
     text-align: center;
 }
+
+
+@media print {
+    div.divFooter {
+        position: fixed;
+        background: url(http://path/to/image.png);
+        height: 100px;
+        /* put the image height here */
+        width: 100px;
+        /* put the image width here */
+        bottom: 0;
+    }
+}

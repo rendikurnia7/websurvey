@@ -23,15 +23,13 @@ $html= '<!DOCTYPE html>
 <title>Report User Survey All 2024</title>
 <link rel="stylesheet" href="css/stylePDF.css">
 </head>
-<style>
 
-</style>
 <body>
 <h1>Report User Survey All 2024</h1>
 
 <table border="1" id="dataTable" cellspacing="0">
             <thead>
-                <tr>
+                <tr class="title">
                     <th>No.</th>
                     <th>Tanggal</th>
                     <th>Nama Instansi</th>
