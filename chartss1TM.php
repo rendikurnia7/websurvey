@@ -1,7 +1,7 @@
 <?php 
-include ('securityA.php');
+include ('security.php');
 include ('includes/header.php');
-include ('includes/navbarA.php');
+include ('includes/navbar.php');
 include ('includes/scripts.php');
 ?>
 
@@ -56,7 +56,7 @@ include ('includes/scripts.php');
                         
                         <script>
 		                var ctx = document.getElementById("chartkesesuianBidang").getContext('2d');
-		            var chartIntegritas = new Chart(ctx, {
+		            var chartkesesuianBidang = new Chart(ctx, {
 			        type: 'bar',
 			        data: {
 						labels: ["Tinggi", "Sedang", "Rendah"],
@@ -169,6 +169,7 @@ include ('includes/scripts.php');
                         });
                     </script>
                     </div>
+					<br>
                     </div>
                     
     
@@ -253,7 +254,7 @@ include ('includes/scripts.php');
                         
                         <script>
 		                var ctx = document.getElementById("chartkemampuanBerbahasaAsing").getContext('2d');
-		            var chartIntegritas = new Chart(ctx, {
+		            var chartkemampuanBerbahasaAsing = new Chart(ctx, {
 			        type: 'bar',
 			        data: {
 				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
@@ -319,7 +320,7 @@ include ('includes/scripts.php');
                         
                         <script>
 		                var ctx = document.getElementById("chartpenggunaanTeknologiInformasi").getContext('2d');
-		                var chartProfesionalisme = new Chart(ctx, {
+		                var chartpenggunaanTeknologiInformasi = new Chart(ctx, {
 			        type: 'bar',
 			        data: {
 				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
@@ -387,7 +388,7 @@ include ('includes/scripts.php');
                         
                         <script>
 		                var ctx = document.getElementById("chartkemampuanBerkomunikasi").getContext('2d');
-		            var chartIntegritas = new Chart(ctx, {
+		            var chartkemampuanBerkomunikasi = new Chart(ctx, {
 			        type: 'bar',
 			        data: {
 				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
@@ -453,7 +454,7 @@ include ('includes/scripts.php');
                         
                         <script>
 		                var ctx = document.getElementById("chartKerjasama").getContext('2d');
-		                var chartProfesionalisme = new Chart(ctx, {
+		                var chartKerjasama = new Chart(ctx, {
 			        type: 'bar',
 			        data: {
 				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
@@ -505,10 +506,76 @@ include ('includes/scripts.php');
 	</script>
     
     </div>
-    <br>
+    
     </div>
     
-           
+     <!-- Donut Chart -->
+	 <div class="col-xl-6 col-lg-1">
+                            <div class="card shadow mb-7">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-2">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pengembangan Diri</h6>
+                                </div>
+                        
+                            <canvas id="chartpengembanganDiri"></canvas>
+                        
+                        <script>
+		                var ctx = document.getElementById("chartpengembanganDiri").getContext('2d');
+		                var chartpengembanganDiri = new Chart(ctx, {
+			        type: 'bar',
+			        data: {
+				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
+				    datasets: [{
+					label: 'Pengembangan Diri',
+					data: [
+					<?php 
+					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='4' AND Prodi='S1 Teknik Mesin'");
+					echo mysqli_num_rows($sangatBaik);
+					?>, 
+					<?php 
+					$Baik = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='3' AND Prodi='S1 Teknik Mesin'");
+					echo mysqli_num_rows($Baik);
+					?>, 
+					<?php 
+					$Cukup = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='2' AND Prodi='S1 Teknik Mesin'");
+					echo mysqli_num_rows($Cukup);
+					?>, 
+					<?php 
+					$Kurang = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='1' AND Prodi='S1 Teknik Mesin'");
+					echo mysqli_num_rows($Kurang);
+					?>
+					],
+					backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(57, 232, 34, 0.2)'
+					],
+					borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(57, 232, 34, 1)'
+					],
+					borderWidth: 3
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				}
+			}
+		});
+	</script>
+    
+    </div>
+    <br>
+    </div>       
+
                     
                 </div>
                 <!-- /.container-fluid -->
