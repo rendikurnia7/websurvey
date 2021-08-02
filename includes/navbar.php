@@ -43,7 +43,7 @@
 <!-- Nav Item - Charts -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTables" aria-expanded="true" aria-controls="collapsePages">
-    <i class="fas fa-fw fa-table"></i>
+    <i class="fas fa-fw fa-chart-area"></i>
     <span>Charts</span>
   </a>
   <div id="collapseTables" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -63,20 +63,16 @@
   </div>
 </li>
 
+
 <!-- Nav Item - Tables -->
+
 <li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTables" aria-expanded="true" aria-controls="collapsePages">
-    <i class="fas fa-fw fa-table"></i>
-    <span>Table</span>
-  </a>
-  <div id="collapseTables" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="dataperusahaan.php"> <i class="fa fa-fw fa-chart-area"></i> Data Perusahaan</a>
-      
-    </div>
-   
-  </div>
+  <a class="nav-link" href="dataPerusahaan.php">
+    <i class="fas fa-table"></i>
+    <span> Data Perusahaan</span></a>
 </li>
+
+
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">

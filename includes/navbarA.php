@@ -72,13 +72,13 @@
   </a>
   <div id="collapseTables" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="chartsAll.php"> <i class="fa fa-fw fa-chart-area"></i> --ALL--</a>
-      <a class="collapse-item" href="chartsd3TM.php"> <i class="fa fa-fw fa-chart-area"></i> D3 Teknik Mesin</a>
-      <a class="collapse-item" href="chartsd3TE.php"> <i class="fa fa-fw fa-chart-area"></i> D3 Teknik Elektro</a>
-      <a class="collapse-item" href="chartss1TI.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Informatika</a>
-      <a class="collapse-item" href="chartss1TE.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Elektro</a>
-      <a class="collapse-item" href="chartss1TM.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Mesin</a>
-      <a class="collapse-item" href="chartss1TS.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Sipil</a>
+      <a class="collapse-item" href="chartsAllA.php"> <i class="fa fa-fw fa-chart-area"></i> --ALL--</a>
+      <a class="collapse-item" href="chartsd3TMA.php"> <i class="fa fa-fw fa-chart-area"></i> D3 Teknik Mesin</a>
+      <a class="collapse-item" href="chartsd3TEA.php"> <i class="fa fa-fw fa-chart-area"></i> D3 Teknik Elektro</a>
+      <a class="collapse-item" href="chartss1TIA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Informatika</a>
+      <a class="collapse-item" href="chartss1TEA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Elektro</a>
+      <a class="collapse-item" href="chartss1TMA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Mesin</a>
+      <a class="collapse-item" href="chartss1TSA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Sipil</a>
     </div>
   </div>
 
