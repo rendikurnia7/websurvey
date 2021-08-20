@@ -1,7 +1,7 @@
 <?php 
 include ('securityA.php');
 include ('includes/header.php');
-include ('includes/navbar.php');
+include ('includes/navbarA.php');
 ?>
 
 <div class= "container-fluid">
@@ -44,7 +44,7 @@ include ('includes/navbar.php');
         <input type="text" name="edit_telppt" value ="<?php echo $row['no_telp'];?>" class ="form-control">
     </div>
 
-    <a href="dataPerusahaan.php" class="btn btn-danger" >Cancel</a>
+    <a href="dataPerusahaanA.php" class="btn btn-danger" >Cancel</a>
     <button type="submit" name="update_dataperusahaan" class= "btn btn-primary">Update</button>
 
     </form>

@@ -128,13 +128,13 @@ if(isset($_POST['registerbtn']))
         {
             $_SESSION['success'] = "Your Data is Updated";
             
-            header('Location: dataPerusahaan.php'); 
+            header('Location: dataPerusahaanA.php'); 
         }
         else
         {
             $_SESSION['status'] = "Your Data is NOT Updated";
            
-            header('Location: dataPerusahaan.php'); 
+            header('Location: dataPerusahaanA.php'); 
         }
     }
     
@@ -142,22 +142,22 @@ if(isset($_POST['registerbtn']))
         if(isset($_POST['delete_perusahaan']))
         {
             include('securityA.php');
-            $namaPerusahaan = $_POST['delete_namapt'];
+            $id = $_POST['delete_idpt'];
         
-            $query = "DELETE FROM dataperusahaan WHERE namaPerusahaan='$namaPerusahaan' ";
+            $query = "DELETE FROM dataperusahaan WHERE id='$id' ";
             $query_run = mysqli_query($connection, $query);
         
             if($query_run)
             {
                 $_SESSION['success'] = "Your Data is Deleted";
                 
-                header('Location: dataPerusahaan.php'); 
+                header('Location: dataPerusahaanA.php'); 
             }
             else
             {
                 echo("Your Data is NOT DELETED");       
                 
-                header('Location: dataPerusahaan.php'); 
+                header('Location: dataPerusahaanA.php'); 
             }    
         }
 

@@ -66,7 +66,7 @@ $query_run = mysqli_query($connection, $query);
 
                 <td>
                     <form action="code.php" method="post">
-                    <input type="hidden" name="delete_namapt" value="<?php echo $row['namaPerusahaan'];?>">
+                    <input type="hidden" name="delete_idpt" value="<?php echo $row['id'];?>">
                     <button type="submit" name= "delete_perusahaan" class= "btn btn-danger"> DELETE</button>
                 </form>
             </td>
