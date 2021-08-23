@@ -1,5 +1,6 @@
 <?php
 include('connection.php');
+include('securityA.php');
 require 'mpdf/vendor/autoload.php';
 
 

@@ -1,5 +1,6 @@
 <?php
 include('connection.php');
+include('securityA.php');
 require 'phpSpreedSheet/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -100,7 +101,7 @@ $styleArray = [
     $i = $i - 1;
     $sheet->getStyle('A3:R'.$i)->applyFromArray($styleArray);
     $sheet->getStyle('A3:R3')->getAlignment()->setHorizontal('center');
-    $sheet->getStyle('A3:Y20')->getAlignment()->setHorizontal('center');
+    
     $sheet->getStyle('A3:R3')->applyFromArray($cellColour);
     
     
@@ -119,6 +120,7 @@ $styleArray = [
     
      $sheet->getStyle('T3:AA4')->applyFromArray($styleArray);
      $sheet->getStyle('A3:Z'.$i)->getAlignment()->setHorizontal('center');
+     $sheet->getStyle('A3:Y20')->getAlignment()->setHorizontal('center');
      $sheet->getStyle('T3:AA3')->applyFromArray($cellColour);
      $sheet->getStyle('U9:Y16')->applyFromArray($styleArray);
      $sheet->getStyle('U9:U16')->applyFromArray($cellColour);
