@@ -343,7 +343,31 @@ if(isset($_POST['registerbtn']))
             }
         }
 
-
+        if(isset($_POST['selectTahuns2TE'])){
+            include('securityA.php');
+            $selectTahun = $_POST['tahun'];
+            if ($selectTahun == '*') {
+                header('Location: dataQuisioners2TE.php'); 
+            }
+            elseif ($selectTahun == '2019') {
+                header('Location: dataQuisioners2TE2019.php'); 
+            }  
+            elseif ($selectTahun == '2020') {
+                header('Location: dataQuisioners2TE2020.php'); 
+            }
+            elseif ($selectTahun == '2021') {
+                header('Location: dataQuisioners2TE2021.php'); 
+            }
+            elseif ($selectTahun == '2022') {
+                header('Location: dataQuisioners2TE2022.php'); 
+            }
+            elseif ($selectTahun == '2023') {
+                header('Location: dataQuisioners2TE2023.php'); 
+            }
+            elseif ($selectTahun == '2024') {
+                header('Location: dataQuisioners2TE2024.php'); 
+            }
+        }
   
 
     

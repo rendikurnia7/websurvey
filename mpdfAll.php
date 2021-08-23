@@ -15,13 +15,13 @@ function query($query) {
 
 $data = query("select * from quisioner ");
 $mpdf= new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [500, 236]]);
-$mpdf= new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [500, 236]]);
+
 
 $html= '<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title > Report User Survey --ALL--</title>
+<title> Report User Survey --ALL-- </title>
 <link rel="stylesheet" href="css/stylePDF.css">
 </head>
 
@@ -63,7 +63,7 @@ $html= '<!DOCTYPE html>
                    <td>'. $row["namaAlumni"] .'</td>
                    <td>'. $row["jabatanAlumni"] .'</td>
                    <td>'. $row["Prodi"] .'</td>
-                   <td>'. $row["kesesuaianBidang"] .'</td>
+                   <td class="tc">'. $row["kesesuaianBidang"] .'</td>
                    <td class="tc">'. $row["Integritas"] .'</td>
                    <td class="tc">'. $row["Profesionalisme"] .'</td>
                    <td class="tc">'. $row["kemampuanBerbahasaAsing"] .'</td>

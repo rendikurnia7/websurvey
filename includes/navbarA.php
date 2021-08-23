@@ -79,6 +79,8 @@
       <a class="collapse-item" href="chartss1TEA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Elektro</a>
       <a class="collapse-item" href="chartss1TMA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Mesin</a>
       <a class="collapse-item" href="chartss1TSA.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Sipil</a>
+      <a class="collapse-item" href="chartss2TEA.php"> <i class="fa fa-fw fa-chart-area"></i> S2 Teknik Elektro</a>
+
     </div>
   </div>
 
@@ -109,6 +111,7 @@
       <a class="collapse-item" href="dataQuisioners1TE.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Elektro</a>
       <a class="collapse-item" href="dataQuisioners1TM.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Mesin</a>
       <a class="collapse-item" href="dataQuisioners1TS.php"> <i class="fa fa-fw fa-chart-area"></i> S1 Teknik Sipil</a>
+      <a class="collapse-item" href="dataQuisioners2TE.php"> <i class="fa fa-fw fa-chart-area"></i> S2 Teknik Elektro</a>
     </div>
   </div>
 
@@ -194,7 +197,7 @@
                   ?>
 
                 </span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img class="img-profile rounded-circle" src="images/logoBLKA.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

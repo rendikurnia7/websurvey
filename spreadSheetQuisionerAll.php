@@ -100,6 +100,7 @@ $styleArray = [
     $i = $i - 1;
     $sheet->getStyle('A3:R'.$i)->applyFromArray($styleArray);
     $sheet->getStyle('A3:R3')->getAlignment()->setHorizontal('center');
+    $sheet->getStyle('A3:Y20')->getAlignment()->setHorizontal('center');
     $sheet->getStyle('A3:R3')->applyFromArray($cellColour);
     
     

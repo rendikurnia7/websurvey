@@ -67,7 +67,7 @@ $html= '<!DOCTYPE html>
                    <td>'. $row["namaAlumni"] .'</td>
                    <td>'. $row["jabatanAlumni"] .'</td>
                    <td>'. $row["Prodi"] .'</td>
-                   <td>'. $row["kesesuaianBidang"] .'</td>
+                   <td class="tc">'. $row["kesesuaianBidang"] .'</td>
                    <td class="tc">'. $row["Integritas"] .'</td>
                    <td class="tc">'. $row["Profesionalisme"] .'</td>
                    <td class="tc">'. $row["kemampuanBerbahasaAsing"] .'</td>
