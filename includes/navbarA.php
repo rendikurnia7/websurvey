@@ -96,6 +96,25 @@
     <span>Data Perusahaan</span></a>
 </li>
 
+<!-- Nav Item - Search data Quisioner -->
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#searchData" aria-expanded="true" aria-controls="collapsePages">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Search Data User Survey</span>
+  </a>
+  <div id="searchData" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <a class="collapse-item" href="searchData.php"> <i class="fa fa-fw fa-chart-area"></i> Search Data</a>
+      <a class="collapse-item" href="searchbyIntegritas.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Integritas</a>
+      <a class="collapse-item" href="searchbyProfesionalisme.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Profesionalisme</a>
+      <a class="collapse-item" href="searchbyKemampuanBerbahasaAsing.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Kemampuan Berbahasa Asing</a>
+      <a class="collapse-item" href="searchbyPenggunaanTeknologiInformasi.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Penggunaan Teknologi Informasi</a>
+      <a class="collapse-item" href="searchbyKemampuanBerkomunikasi.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Kemampuan Berkomunikasi</a>
+      <a class="collapse-item" href="searchbyKerjasama.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Kerjasama</a>
+      <a class="collapse-item" href="searchbyPengembanganDiri.php"> <i class="fa fa-fw fa-chart-area"></i> Search by Pengembangan Diri</a>
+    </div>
+  </div>
+
 <!-- Nav Item - data Quisioner -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Quisioner" aria-expanded="true" aria-controls="collapsePages">

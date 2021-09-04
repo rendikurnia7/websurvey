@@ -40,8 +40,9 @@ session_start();
                                         name="usernamel"placeholder="Enter Username..." autocomplete="off">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user"
+                                    <input id="myInput" type="password" class="form-control form-control-user"
                                     name="passwordl" placeholder="Password" autocomplete="off">
+                                    <input type="checkbox" onclick="myFunction()"> Show Password
                                 </div>
                                 
                                 <button type="submit" name="login_btn" class="btn btn-primary btn-user btn-block">Login</button>
@@ -60,6 +61,17 @@ session_start();
 </div>
 
 </div>
+
+<script>
+    function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <?php
 

@@ -16,7 +16,7 @@ if(isset($_POST['registerbtn']))
             
             if($query_run)
             {
-                // echo "Saved";
+               
                 $_SESSION['success'] = "Admin Profile Added";
                 header('Location: registerA.php');
             }

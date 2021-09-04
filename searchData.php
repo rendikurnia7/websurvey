@@ -6,33 +6,25 @@ include ('includes/navbarA.php');
 ?>
 <div class="container-fluid table-responsive">
 
-<label for="prodi">Select Program Studi</label>
+<label for="cari">Search by Tanggal/Nama Instansi/Skala Perusahaan/Nama Alumni/Jabatan Alumni/cari/Kesesuaian Bidang Kerja</label>
 <div>
-<form class="user" action="dataQuisioner.php" method="GET">
-<select name="prodi" id="prodi">
-    <option >--ALL--</option>
-  <option name="prodi" value="S1 Teknik Informatika">S1 Teknik Informatika </option>
-  <option name="prodi" value="S1 Teknik Elektro">S1 Teknik Elektro </option>
-  <option name="prodi" value="S1 Teknik Sipil">S1 Teknik Sipil </option>
-  <option name="prodi" value="S1 Teknik Mesin">S1 Teknik Mesin </option>
-  <option name="prodi" value="D3 Teknik Elektro" >D3 Teknik Elektro </option>
-  <option name="prodi" value="D3 Teknik Mesin">D3 Teknik Mesin </option>
-</select>
-<button class="btn btn-info" type="submit" value="cari">Select</button>
+<form class="user" action="searchData.php" method="GET">
+<input type="text" name="cari">
+
+<button class="btn btn-info" type="submit" value="cari">Search <i class="fas fa-search"></i></button>
 
 </div>
 </form>
 
 
         <?php
-if(isset($_GET['prodi'])){
-	$cari = $_GET['prodi'];
+if(isset($_GET['cari'])){
+	$cari = $_GET['cari'];
 	echo "<b>Hasil pencarian : ".$cari."</b>";
 }
 
 $no=1;
-//$query = "select * from quisioner ";
-//$query_run = mysqli_query($connection, $query);
+
 
 ?>
         
@@ -65,9 +57,9 @@ $no=1;
 
         <tbody>
             <?php
-            if(isset($_GET['prodi'])){
-                $cari = $_GET['prodi'];
-                $data = mysqli_query($connection,"select * from quisioner where Prodi ='$cari'");				
+            if(isset($_GET['cari'])){
+                $cari = $_GET['cari'];
+                $data = mysqli_query($connection,"select * from quisioner where Prodi LIKE '%$cari%' OR namaInstansi LIKE '%$cari%' OR Tanggal LIKE '%$cari%' OR skalaPerusahaan LIKE '%$cari%' OR namaAlumni LIKE '%$cari%' OR jabatanAlumni LIKE '%$cari%' OR kesesuaianBidang LIKE '%$cari%' OR skalaPerusahaan LIKE '%$cari%'");				
             }else{
                 $data = mysqli_query($connection,"select * from quisioner");		
             }

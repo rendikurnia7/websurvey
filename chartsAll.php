@@ -10,36 +10,7 @@ include ('includes/scripts.php');
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-                   <!-- <label for="prodi">Select Program Studi</label> --->
-       <!------
-                    <form class="user" method="POST">
-            <select class="form-select" name="prodi" id="prodi">
-                <option value="*" selected>--ALL--</option>
-            <option name="prodi" value="S1 Teknik Informatika">S1 Teknik Informatika </option>
-            <option name="prodi" value="S1 Teknik Elektro">S1 Teknik Elektro </option>
-            <option name="prodi" value="S1 Teknik Sipil">S1 Teknik Sipil </option>
-            <option name="prodi" value="S1 Teknik Mesin">S1 Teknik Mesin </option>
-            <option name="prodi" value="D3 Teknik Elektro">D3 Teknik Elektro </option>
-            <option name="prodi" value="D3 Teknik Mesin">D3 Teknik Mesin </option>
-            </select>
-            <button class="btn btn-info" type="submit" name="selectProdi">Select</button>
-        </form>
-        ---->
-        <?php
-        /*
-        if(isset($_POST['selectProdi'])){
-            $selectProdi = $_POST['prodi'];
-            if ($selectProdi == '*') {
-                $query='SELECT * from quisioner where';
-            }
-            if ($selectProdi == 'S1 Teknik Informatika') {
-                $query='SELECT * from quisioner where';
-            }
-            else if ($selectProdi == 'S1 Teknik Elektro') {
-                $query='SELECT * from quisioner where';
-            }
-        }*/
-        ?>
+                 
 
                     <!-- Content Row -->
                     <div class="row">
@@ -63,15 +34,15 @@ include ('includes/scripts.php');
 					label: 'Kesesuaian Pekerjaan Alumni dengan Program Studi',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where kesesuaianBidang='Tinggi'");
+					$sangatBaik = mysqli_query($connection,"SELECT kesesuaianBidang from quisioner where kesesuaianBidang='Tinggi'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where kesesuaianBidang='Sedang'");
+					$Baik = mysqli_query($connection,"SELECT kesesuaianBidang from quisioner where kesesuaianBidang='Sedang'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where kesesuaianBidang='Rendah'");
+					$Cukup = mysqli_query($connection,"SELECT kesesuaianBidang from quisioner where kesesuaianBidang='Rendah'");
 					echo mysqli_num_rows($Cukup);
 					?>
 					],
@@ -125,19 +96,19 @@ include ('includes/scripts.php');
 					label: 'Integritas',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where Integritas='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT Integritas from quisioner where Integritas='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where Integritas='3'");
+					$Baik = mysqli_query($connection,"SELECT Integritas from quisioner where Integritas='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where Integritas='2'");
+					$Cukup = mysqli_query($connection,"SELECT Integritas from quisioner where Integritas='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where Integritas='1'");
+					$Kurang = mysqli_query($connection,"SELECT Integritas from quisioner where Integritas='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -192,19 +163,19 @@ include ('includes/scripts.php');
 					label: 'Profesionalisme',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where Profesionalisme='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT Profesionalisme from quisioner where Profesionalisme='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where Profesionalisme='3'");
+					$Baik = mysqli_query($connection,"SELECT Profesionalisme from quisioner where Profesionalisme='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where Profesionalisme='2'");
+					$Cukup = mysqli_query($connection,"SELECT Profesionalisme from quisioner where Profesionalisme='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where Profesionalisme='1'");
+					$Kurang = mysqli_query($connection,"SELECT Profesionalisme from quisioner where Profesionalisme='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -261,19 +232,19 @@ include ('includes/scripts.php');
 					label: 'Kemampuan Berbahasa Asing',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerbahasaAsing='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT kemampuanBerbahasaAsing from quisioner where kemampuanBerbahasaAsing='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerbahasaAsing='3'");
+					$Baik = mysqli_query($connection,"SELECT kemampuanBerbahasaAsing from quisioner where kemampuanBerbahasaAsing='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerbahasaAsing='2'");
+					$Cukup = mysqli_query($connection,"SELECT kemampuanBerbahasaAsing from quisioner where kemampuanBerbahasaAsing='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerbahasaAsing='1'");
+					$Kurang = mysqli_query($connection,"SELECT kemampuanBerbahasaAsing from quisioner where kemampuanBerbahasaAsing='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -324,22 +295,22 @@ include ('includes/scripts.php');
 			        data: {
 				    labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
 				    datasets: [{
-					label: 'Profesionalisme',
+					label: 'penggunaanTeknologiInformasi',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where penggunaanTeknologiInformasi='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT penggunaanTeknologiInformasi from quisioner where penggunaanTeknologiInformasi='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where penggunaanTeknologiInformasi='3'");
+					$Baik = mysqli_query($connection,"SELECT penggunaanTeknologiInformasi from quisioner where penggunaanTeknologiInformasi='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where penggunaanTeknologiInformasi='2'");
+					$Cukup = mysqli_query($connection,"SELECT penggunaanTeknologiInformasi from quisioner where penggunaanTeknologiInformasi='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where penggunaanTeknologiInformasi='1'");
+					$Kurang = mysqli_query($connection,"SELECT penggunaanTeknologiInformasi from quisioner where penggunaanTeknologiInformasi='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -395,19 +366,19 @@ include ('includes/scripts.php');
 					label: 'Kemampuan Berkomunikasi',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerkomunikasi='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT kemampuanBerkomunikasi from quisioner where kemampuanBerkomunikasi='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerkomunikasi='3'");
+					$Baik = mysqli_query($connection,"SELECT kemampuanBerkomunikasi from quisioner where kemampuanBerkomunikasi='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerkomunikasi='2'");
+					$Cukup = mysqli_query($connection,"SELECT kemampuanBerkomunikasi from quisioner where kemampuanBerkomunikasi='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where kemampuanBerkomunikasi='1'");
+					$Kurang = mysqli_query($connection,"SELECT kemampuanBerkomunikasi from quisioner where kemampuanBerkomunikasi='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -461,19 +432,19 @@ include ('includes/scripts.php');
 					label: 'Kerjasama',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where Kerjasama='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT Kerjasama from quisioner where Kerjasama='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where Kerjasama='3'");
+					$Baik = mysqli_query($connection,"SELECT Kerjasama from quisioner where Kerjasama='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where Kerjasama='2'");
+					$Cukup = mysqli_query($connection,"SELECT Kerjasama from quisioner where Kerjasama='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where Kerjasama='1'");
+					$Kurang = mysqli_query($connection,"SELECT Kerjasama from quisioner where Kerjasama='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],
@@ -528,19 +499,19 @@ include ('includes/scripts.php');
 					label: 'Pengembangan Diri',
 					data: [
 					<?php 
-					$sangatBaik = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='4'");
+					$sangatBaik = mysqli_query($connection,"SELECT pengembanganDiri from quisioner where pengembanganDiri='4'");
 					echo mysqli_num_rows($sangatBaik);
 					?>, 
 					<?php 
-					$Baik = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='3'");
+					$Baik = mysqli_query($connection,"SELECT pengembanganDiri from quisioner where pengembanganDiri='3'");
 					echo mysqli_num_rows($Baik);
 					?>, 
 					<?php 
-					$Cukup = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='2'");
+					$Cukup = mysqli_query($connection,"SELECT pengembanganDiri from quisioner where pengembanganDiri='2'");
 					echo mysqli_num_rows($Cukup);
 					?>, 
 					<?php 
-					$Kurang = mysqli_query($connection,"SELECT * from quisioner where pengembanganDiri='1'");
+					$Kurang = mysqli_query($connection,"SELECT pengembanganDiri from quisioner where pengembanganDiri='1'");
 					echo mysqli_num_rows($Kurang);
 					?>
 					],

@@ -55,7 +55,7 @@ include ('includes/navbarA.php');
     <div class="card-header py-3">
         <h6 class="m0 font-weight-bold text-primary">Admin Profile 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
-        Add Admin Profile 
+        Add Admin
         </button>
         </h6>
 

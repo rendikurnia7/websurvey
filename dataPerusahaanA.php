@@ -7,9 +7,15 @@ include ('includes/navbarA.php');
 <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Perusahaan</h1>
-                        <a href="spreadSheetPerusahaan.php" name="export"type="submit" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
+                        <a href="spreadSheetPerusahaan.php" name="export"type="submit" target="_blank" class="btn-success d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50 " ></i> Generate Report to Excel</a>
         </div>
+
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h5 class="h5 mb-0 text-gray-800"></h5>
+        <a href="mpdfPerusahaan.php" target="_blank" name="export"type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report to PDF</a>
+                                </div>
 
         <?php
 if (isset($_SESSION['success']) && $_SESSION['success'] !='')
